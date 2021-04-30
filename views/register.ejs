@@ -1,0 +1,55 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+    <div class="row  justify-content-center">
+        <h1 class="display-4">Sign Up</h1>
+    </div>
+    <div class="row  justify-content-center">
+        <div class="col-6">
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="type" class="form-label">I am...</label>
+                    <select name="type" id="" class="form-control">
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="Recruiter">Recruiter</option>
+                        <option value="Candidate">Candidate</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" name="firstname" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" name="lastname" id="" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="Phone" class="form-label">Phone No</label>
+                    <input type="text" name="Phone" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                           
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                           
+                    <label for="cnfpassword" class="form-label">Confirm Password</label>
+                    <input type="password" name="cnfpassword" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" name="" id="" class="btn btn-primary">
+                    <p>Already have account?  <a href="/login">Login</a></p>
+                </div>
+        </div>
+        </form>
+    </div>  
+</div>
+
+
+<%- include("./partials/footer") %>

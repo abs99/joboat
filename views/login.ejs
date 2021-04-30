@@ -1,0 +1,35 @@
+<%- include("./partials/header") %>
+<div class="container">
+    <div class="row border justify-content-center">
+        <h1 class="display-3">Sign In</h1>
+    </div>
+    <div class="row border justify-content-center">
+        <div class="col-6">
+            <form action="/login" method="POST">
+                <div class="mb-3">
+                    <label for="type" class="form-label">I am</label>
+                    <select name="type" id="">
+                        <option value="Recruiter">Recruiter</option>
+                        <option value="Candidate">Candidate</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                           
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" name="" id="" class="btn btn-primary">
+                    <p>Dont have account?  <a href="/register">Register</a></p>
+                </div>
+        </div>
+        
+        </form>
+
+    </div>  
+</div>
+<%- include("./partials/footer") %>

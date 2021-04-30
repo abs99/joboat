@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Jobs</title>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Joboat</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><%=user%></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+</head>
+<body>
+    
+
+<div class="container">
+    <div class="row  justify-content-center">
+        <h1 class="display-3">Create Job</h1>
+    </div>
+    <div class="row  justify-content-center">
+        <div class="col-6">
+            <form action="/jobs/<%=jid%>" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Position</label>
+                    <input type="text" name="name" id="" class="form-control">
+                </div>
+                <div class="mb-3">
+                           
+                <label for="description" class="form-label">Description</label>
+                <textarea name="description" id="" cols="100" rows="8" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" name="" id="" class="btn btn-primary">
+                </div>
+        </div>
+        </form>
+    </div>  
+</div>
+<%- include("./partials/footer") %>

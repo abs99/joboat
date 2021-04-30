@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Jobs</title>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Joboat</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><%=user%></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+</head>
+<body>
+    
+
+
+<div class="container tp">
+   <div class="display-4 center mb-4">Welcome to Joboat <%=user%> </div>
+   <div class="row">
+    <div class="col-6">
+        <img src="https://images.unsplash.com/photo-1557754897-ca12c5049d83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" class="img-fluid">
+    </div>
+    <div class="col-6 ">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At adipisci quos, fugiat laborum impedit vitae soluta libero, sed nisi officiis quo excepturi temporibus repellendus doloribus omnis. Vero velit sit cum?</p>
+        <p class="mb-5 ml-5"> <a href="/jobs/" class="btn btn-primary">See All Jobs</a> </p>
+        <%if(type=='Candidate'){%>
+        <p class="mb-5 ml-5"><a href="/applications/<%=id%>" class="btn btn-primary">My Applications!</a></p>
+        <%}%>
+        <%if(type=='Recruiter'){%>
+        <p class="mb-5 ml-5"> <a href="/jobs/<%=id%>" class="btn btn-primary">I want to Hire !</a></p>
+        <%}%>
+    </div>
+    
+   </div>
+   
+</div>
+
+<%- include("./partials/footer") %>

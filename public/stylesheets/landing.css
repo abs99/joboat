@@ -1,0 +1,25 @@
+.mainbox{
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url('/images/land.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 670px;;
+    width: 100%;
+    /* opacity: 0.6; */
+}
+.head{
+    text-align: center;
+   padding-top: 100px;
+   color: #fff;
+}
+.tp{
+    margin-top:20px;
+  }
+
+  .btn{
+      font-size: 1.5rem;
+  }
+
+  .mtext{
+    font-size: 1.3rem;
+    padding: 20px;
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Jobs</title>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Joboat</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/profile">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><%=user%></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+</head>
+<body>
+    
+<div class="container">
+   <div class="row">
+       <h1>Your Applications</h1>
+   </div>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <% jobs.forEach(function(j){%>
+            
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <div class="card-title"><strong><%=j.name%></strong></div>
+                        <div class="card-text"><%=j.description%></div>
+                    </div>
+                </div>
+                   
+                           
+            
+        <%})%>
+        </div>
+
+    </div>
+</div>
+<%- include("./partials/footer") %>
